@@ -70,7 +70,14 @@ const User = sequelize.define('user', {
 //   console.log(user.get('firstName'));
 // });
 
-User.findById(1)
-.then(user => {
-	console.log(user);
+// User.findById(1)
+// .then(user => {
+// 	console.log(user.dataValues);
+// });
+
+User.findAll()
+.then(users => {
+	console.log(users.length);
 })
+
+
